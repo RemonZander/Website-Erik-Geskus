@@ -6,10 +6,12 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "HomePage",
 }
 </script>
 
 <style scoped>
-
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 </style>
