@@ -5,10 +5,12 @@
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": [ "./*" ]
     },
+    "include": [
+      "./**/*.js",
+      "./**/*.vue"
+    ],
     "lib": [
       "esnext",
       "dom",

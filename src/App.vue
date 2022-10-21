@@ -10,4 +10,6 @@ export default {
 }
 </script>
 
-<style src="../src/assets/style.css"/>
+<style>
+@import url("../src/assets/style.css");
+</style>
