@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <header>
-      Header hier
+      <header-vue></header-vue>
     </header>
     <main class="flex-grow">
       Pagina content (Discografie etc) hier
@@ -13,7 +13,10 @@
 </template>
 
 <script>
+import HeaderVue from './HeaderVue.vue';
+
 export default {
+  components: { HeaderVue },
   name: "HomePage",
 }
 </script>
