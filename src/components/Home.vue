@@ -7,19 +7,14 @@
       Pagina content (Discografie etc) hier
     </main>
     <footer>
-      <Footer/>
+      Footer hier
     </footer>
   </div>
 </template>
 
 <script>
-import Footer from "@/components/Footer";
-
 export default {
   name: "HomePage",
-  components: {
-    Footer
-  }
 }
 </script>
 
