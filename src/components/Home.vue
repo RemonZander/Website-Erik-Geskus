@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <header>
-      Header hier
+      <HeaderComponent/>
     </header>
     <main class="flex-grow">
       Pagina content (Discografie etc) hier
@@ -13,7 +13,12 @@
 </template>
 
 <script>
+import HeaderComponent from "@/components/HeaderComponent";
+
 export default {
+  components: {
+    HeaderComponent
+  },
   name: "HomePage",
 }
 </script>
