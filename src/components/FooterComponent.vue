@@ -6,7 +6,7 @@
     <div>
       <div class="red-line mb-10"></div>
     </div>
-    <div class="flex pl-96 flex-col text-elipsis">
+    <div class="flex pl-96 flex-col">
       <div class="text-2xl text-white mb-10">Gëinspireerd geraakt?</div>
     </div>
     <div class="flex flex-col text-clip overflow-hidden">
