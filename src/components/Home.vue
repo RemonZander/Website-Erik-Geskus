@@ -1,25 +1,24 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <header>
-      Header hier
     </header>
     <main class="flex-grow">
-      Pagina content (Discografie etc) hier
     </main>
     <footer>
-      <Footer/>
+      <FooterComponent/>
     </footer>
   </div>
 </template>
 
 <script>
-import Footer from "@/components/Footer";
+
+import FooterComponent from "@/components/FooterComponent";
 
 export default {
-  name: "HomePage",
   components: {
-    Footer
-  }
+    FooterComponent
+  },
+  name: "HomePage",
 }
 </script>
 
