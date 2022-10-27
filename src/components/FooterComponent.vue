@@ -17,16 +17,16 @@
     </div>
     <div>
       <div class="flex flex-row items-center gap-2 pl-[20%]">
-        <Icon class="text-white pl-5" icon="mdi-light:phone"></Icon>
+        <Icon class="text-white" icon="mdi-light:home"></Icon>
         <div class=" text-white opacity-50">06 12 34 58 78</div>
-      </div>
+      </div>1
     </div>
     <div class="flex flex-row items-center gap-2 pl-[20%]">
       <Icon class="text-white" icon="mdi-light:email"></Icon>
       <div class=" text-white opacity-50">info@erikgeskus.nl</div>
     </div>
     <div class="flex flex-row items-center gap-2 pl-[20%]">
-      <Icon class="text-white" icon="mdi-light:youtube"></Icon>
+      <Icon class="text-white" icon="mdi-light:youtube-subscription"></Icon>
       <div class=" text-white opacity-50">Erik Geskus</div>
     </div>
     <div class="pl-[20%] pb-[5%] pt-[2%]">
@@ -70,9 +70,6 @@ export default {
        * TODO Add submit and email functionality
        */
     }
-  },
-  focusAddBorder() {
-
   }
 }
 </script>
