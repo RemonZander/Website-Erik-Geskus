@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <p class="text-white text-5xl pt-[20%] pl-[47%] opacity-50">Contact opnemen</p>
+      <p class="text-white text-5xl pt-[20%] pl-[47%]">Contact opnemen</p>
     </div>
     <div>
       <div class="h-2 bg-red-800 w-8/12 mb-[2%]"></div>
@@ -32,20 +32,29 @@
       <div class="pl-[20%] pb-[0.5%] text-white opacity-50">Erik Geskus</div>
     </div>
     <div class="pl-[20%] pb-[5%] pt-[2%]">
-      <div class="text-white text-black pb-[3%] pt-[3%] flex flex-col bg-white opacity-30 w-[50%] h-50 place-items-center justify-center rounded-lg">
+      <div class="text-white text-black pb-[3%] pt-[3%] flex flex-col bg-white w-[50%] h-50 place-items-center justify-center rounded-lg">
         <div class="text-2xl pb-[3%]">Contact formulier</div>
         <form>
-          <div class="text-white flex flex-col pb-[2%%]">
+
+          <div class="flex flex-col pb-[2%%]">
             <label for="naam" class="text-sm text-black">Uw naam</label>
-            <input type="text" id="naan" class="rounded-lg bg-black w-full dark:text-white">
+            <input type="text" id="naan" class="rounded-lg border-2 bg-white w-full dark:text-white ">
           </div>
-          <div class="text-white flex flex-col pb-[2%]">
+
+          <div class="flex flex-col pb-[2%]">
             <label for="email" class="text-sm text-black">Uw email</label>
-            <input type="text" id="email" class="rounded-lg bg-black w-full dark:text-white">
+            <input type="text" id="email" class="rounded-lg border-2 border-red-400 focus:border-red-800 bg-white w-full dark:text-white">
           </div>
-          <div class="text-white flex flex-col pb-[2%] mt-[4%]">
+
+          <div class="flex flex-col pb-[2%]">
+            <label for="email" class="text-sm text-black">Uw vraag</label>
+            <input type="text" id="email" class="rounded-lg border-2 bg-white w-full dark:text-white">
+          </div>
+
+          <div class="flex flex-col pb-[2%] mt-[4%]">
             <button class="rounded-lg bg-red-500 text- pl-[2%]">Contactverzoek opsturen</button>
           </div>
+
         </form>
       </div>
     </div>
