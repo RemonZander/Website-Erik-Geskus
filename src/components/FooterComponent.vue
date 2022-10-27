@@ -35,15 +35,14 @@
       <div class="text-white text-black pb-[3%] pt-[3%] flex flex-col bg-white w-[50%] h-50 place-items-center justify-center rounded-lg">
         <div class="text-2xl pb-[3%]">Contact formulier</div>
         <form>
-
           <div class="flex flex-col pb-[2%%]">
             <label for="naam" class="text-sm text-black">Uw naam</label>
-            <input type="text" id="naan" class="rounded-lg border-2 bg-white w-full dark:text-white ">
+            <input type="text" id="naan" class="rounded-lg border-2 bg-white hover:border-red-800 w-full dark:text-white ">
           </div>
 
           <div class="flex flex-col pb-[2%]">
             <label for="email" class="text-sm text-black">Uw email</label>
-            <input type="text" id="email" class="rounded-lg border-2 border-red-400 focus:border-red-800 bg-white w-full dark:text-white">
+            <input type="text" id="email" class="rounded-lg border-2 focus:border-red-800 bg-white w-full dark:text-white">
           </div>
 
           <div class="flex flex-col pb-[2%]">
@@ -74,6 +73,9 @@ export default {
        */
     }
   },
+  focusAddBorder() {
+
+  }
 }
 </script>
 
