@@ -4,20 +4,24 @@
       <HeaderComponent/>
     </header>
     <main class="flex-grow">
-      Pagina content (Discografie etc) hier
+      <GalleryComponent/>
     </main>
     <footer>
-      Footer hier
+      <FooterComponent/>
     </footer>
   </div>
 </template>
 
 <script>
 import HeaderComponent from "@/components/HeaderComponent";
+import GalleryComponent from "@/components/GalleryComponent";
+import FooterComponent from "@/components/FooterComponent";
 
 export default {
   components: {
-    HeaderComponent
+    HeaderComponent,
+    GalleryComponent,
+    FooterComponent
   },
   name: "HomePage",
 }
