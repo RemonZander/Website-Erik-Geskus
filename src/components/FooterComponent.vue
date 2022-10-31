@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col w-6/12 mb-[2%] pt-[20%]">
-      <p class="text-white self-end sm:text-1xl md:text-3xl lg:text-5xl">Contact opnemen</p>
+      <p class="item-left text-white self-end text-3xl ">Contact opnemen</p>
       <div class="h-2 bg-red-800"></div>
     </div>
     <div class="flex flex-col text-clip overflow-hidden ">
@@ -10,7 +10,7 @@
       </div>
       <div class="pl-[20%] pr-[20%] text-white opacity-50">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tos It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </div>b-[1%]">
+      </div>
       <div class="pt-[3%] pl-[20%] pb-6 text-white text-2xl">Erik Geskus</div>
     </div>
     <div>
@@ -53,11 +53,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.red-line {
-  height: 5px;
-  background: darkred;
-  width: 61.1%;
-}
-</style>

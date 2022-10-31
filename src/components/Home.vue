@@ -4,6 +4,7 @@
       <HeaderComponent/>
     </header>
     <main class="flex-grow">
+      <biographyComponent/>
     </main>
     <footer>
       <FooterComponent/>
@@ -15,11 +16,13 @@
 
 import FooterComponent from "@/components/FooterComponent";
 import HeaderComponent from "@/components/HeaderComponent";
+import BiographyComponent from "@/components/BiographyComponent";
 
 export default {
   components: {
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    BiographyComponent
   },
   name: "HomePage",
 }
