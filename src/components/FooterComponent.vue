@@ -31,18 +31,18 @@
       <form class="">
         <div class="flex flex-col pb-[0.5%] pt-[0.5%] pl-[20%]">
           <label for="naam" class="text-sm text-white">Uw naam</label>
-          <input type="text" id="naam" class="rounded-lg input-width-30" placeholder="Voornaam">
+          <input v-model="nameValue" type="text" id="naam" class="rounded-lg input-width-30" placeholder="Voornaam">
         </div>
         <div class="flex flex-col pb=[0.5%] pt-[0.5%] pl-[20%]">
           <label for="email" class="text-sm text-white">UW email</label>
-          <input type="text" id="email" class="rounded-lg input-width-30" placeholder="voorbeeld@gmail.com">
+          <input v-model="emailValue" type="text" id="email" class="rounded-lg input-width-30" placeholder="voorbeeld@gmail.com">
         </div>
         <div class="flex flex-col pb-[0.5%] pt-[0.5%] pl-[20%]">
           <label for="vraag" class="text-sm text-white">Uw vraag</label>
-          <textarea rows="10" id="vraag" class="rounded-lg input-width-30" placeholder="Ik heb een vraag"></textarea>
+          <textarea v-model="questionValue" rows="10" id="vraag" class="rounded-lg input-width-30" placeholder="Ik heb een vraag"></textarea>
         </div>
         <div class="flex flex-col pb-[0.5%] pt-[0.5%] pl-[20%]">
-          <button class="rounded-lg bg-green-500 text-white button-width-30">Stuur contactverzoek</button>
+          <button @click.prevent="submitForm" class="rounded-lg bg-green-500 text-white button-width-30">Stuur contactverzoek</button>
         </div>
       </form>
     </div>
@@ -51,15 +51,34 @@
 
 <script>
 import {Icon} from "@iconify/vue";
+import axios from 'axios'
 
 export default {
   name: "FooterComponent",
   components: {Icon},
+  mounted() {
+    axios.defaults.baseURL = "http://localhost:5000"
+  },
   methods: {
-    submitForm() {
-      /**
-       * TODO Add submit and email functionality
-       */
+   async submitForm() {
+      if (this.nameValue && this.emailValue && this.questionValue) {
+        axios.post('/sendmail', {
+          from: this.nameValue,
+          email: this.emailValue,
+          question: this.questionValue
+        }).then(response => {
+          console.log(response)
+        })
+      } else {
+        alert("Één of meerdere verplichte velden zijn niet ingevuld op het contact formulier")
+      }
+    }
+  },
+  data() {
+    return {
+      nameValue: '',
+      emailValue: '',
+      questionValue: ''
     }
   }
 }
