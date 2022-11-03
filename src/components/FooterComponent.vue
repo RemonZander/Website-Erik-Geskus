@@ -31,18 +31,18 @@
       <form class="">
         <div class="flex flex-col pb-[0.5%] pt-[0.5%] pl-[20%]">
           <label for="naam" class="text-sm text-white">Uw naam</label>
-          <input v-model="nameValue" type="text" id="naam" class="rounded-lg input-width-30" placeholder="Voornaam">
+          <input v-model="nameValue" type="text" id="naam" class="w-1/3 rounded-lg input-width-30" placeholder="Voornaam">
         </div>
         <div class="flex flex-col pb=[0.5%] pt-[0.5%] pl-[20%]">
           <label for="email" class="text-sm text-white">UW email</label>
-          <input v-model="emailValue" type="text" id="email" class="rounded-lg input-width-30" placeholder="voorbeeld@gmail.com">
+          <input v-model="emailValue" type="text" id="email" class="w-1/3 rounded-lg input-width-30" placeholder="voorbeeld@gmail.com">
         </div>
         <div class="flex flex-col pb-[0.5%] pt-[0.5%] pl-[20%]">
           <label for="vraag" class="text-sm text-white">Uw vraag</label>
-          <textarea v-model="questionValue" rows="10" id="vraag" class="rounded-lg input-width-30" placeholder="Ik heb een vraag"></textarea>
+          <textarea v-model="questionValue" rows="10" id="vraag" class="w-1/3 rounded-lg input-width-30" placeholder="Ik heb een vraag"></textarea>
         </div>
         <div class="flex flex-col pb-[0.5%] pt-[0.5%] pl-[20%]">
-          <button @click.prevent="submitForm" class="rounded-lg bg-green-500 text-white button-width-30">Stuur contactverzoek</button>
+          <button @click.prevent="submitForm" class="w-1/3 rounded-lg bg-green-500 text-white button-width-30">Stuur contactverzoek</button>
         </div>
       </form>
     </div>
