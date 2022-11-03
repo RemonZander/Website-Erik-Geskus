@@ -4,7 +4,8 @@
       <HeaderComponent/>
     </header>
     <main class="flex-grow">
-      <GalleryComponent/>
+      <BiographyComponent/>
+      <NewsComponent/>
     </main>
     <footer>
       <FooterComponent/>
@@ -13,15 +14,18 @@
 </template>
 
 <script>
-import HeaderComponent from "@/components/HeaderComponent";
-import GalleryComponent from "@/components/GalleryComponent";
+
 import FooterComponent from "@/components/FooterComponent";
+import HeaderComponent from "@/components/HeaderComponent";
+import BiographyComponent from "@/components/BiographyComponent";
+import NewsComponent from "./NewsComponent.vue";
 
 export default {
   components: {
+    FooterComponent,
     HeaderComponent,
-    GalleryComponent,
-    FooterComponent
+    BiographyComponent,
+    NewsComponent
   },
   name: "HomePage",
 }
