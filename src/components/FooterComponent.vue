@@ -19,16 +19,13 @@
     </div>
     <div>
       <div class="flex flex-row">
-        <Icon class="text-white pl-5" icon="mdi-light:phone"></Icon>
         <div class="pl-[20%] pb-[0.5%] text-white opacity-50">06 12 34 58 78</div>
       </div>
     </div>
     <div class="flex flex-row">
-      <Icon icon="mdi-light:email"></Icon>
       <div class="pl-[20%] pb-[0.5%] text-white opacity-50">info@erikgeskus.nl</div>
     </div>
     <div class="flex flex-row">
-      <Icon icon="mdi-light:youtube"></Icon>
       <div class="pl-[20%] pb-[0.5%] text-white opacity-50">Erik Geskus</div>
     </div>
     <div class="pl-[20%] pb-[5%] pt-[2%]">
@@ -53,10 +50,8 @@
 </template>
 
 <script>
-import {Icon} from "@iconify/vue";
 export default {
   name: "FooterComponent",
-  components: {Icon},
   methods: {
     submitForm() {
       /**

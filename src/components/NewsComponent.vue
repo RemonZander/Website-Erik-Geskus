@@ -1,17 +1,19 @@
 <template>
-    <div class="">
+
+    <div class="w-1/2 float-right">
       <div class="width-[40%] align-right mb-[10%] pt-[10%]">
         <p class="text-white text-3xl align-items-end">Nieuwsoverzicht</p>
         <div class="h-2 bg-red-800"></div>
       </div>
-      <div class="flex flex-col text-clip overflow-hidden ">
-        <div class="flex flex-col text-elipsis mt-[2%] pl-[20%]">
-          <div class="flex text-1xl lg:text-2xl text-white mb-3">Eric Geskus</div>
-        </div>
-        <div class="pl-[20%] pr-[20%] text-white opacity-50">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tos It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </div>
+      <div class="">
+        <h2 class="text-xl" id="title">Recenste YouTube Post</h2>
+        <p class="pt-2 text-white opacity-50" id="date">19 Maart 2022</p>
       </div>
+      <div class="flex flex-col pt-2 text-white opacity-50" id="paragraph">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dignissimos pariatur modi maxime omnis? Dolores facere facilis nemo aperiam sapiente porro necessitatibus hic voluptatem, nesciunt temporibus sunt debitis perspiciatis molestiae?
+      <a class="pt-2 underline underline-offset-3" href="#">Meer Lezen?</a>
+      </div>
+
     </div>  
   </template>
 
