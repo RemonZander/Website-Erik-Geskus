@@ -1,64 +1,86 @@
-<template>
+<template xmlns:form="http://www.w3.org/1999/html">
   <div>
-    <div>
-      <p class="text-white text-5xl pt-[20%] pl-[47%] opacity-50">Contact opnemen</p>
+    <div class="flex flex-col w-6/12 mb-7 pt-[20%]">
+      <p class="text-white self-end sm:text-1xl md:text-3xl lg:text-5xl">Contact opnemen</p>
+      <div class="h-2 bg-red-800"></div>
     </div>
-    <div>
-      <div class="h-2 bg-red-800 w-8/12 mb-[2%]"></div>
-    </div>
-    <div class="flex pl-[20%] flex-col text-elipsis">
-      <div class="text-2xl text-white mb-10">Gëinspireerd geraakt?</div>
-    </div>
-    <div class="flex flex-col text-clip overflow-hidden">
-      <div class="pl-[20%] text-white opacity-50">
+    <div class="flex flex-col text-clip overflow-hidden ">
+      <div class="flex flex-col text-elipsis mt-5 pl-[20%]">
+        <div class="flex text-1xl lg:text-2xl text-white mb-10">Gëinspireerd geraakt?</div>
+      </div>
+      <div class="pl-[20%] pr-[20%] text-white opacity-50">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tos It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </div>
-    </div>
-    <div class="flex flex-col pb-[1%]">
-      <div class="pt-[3%] pl-[20%] pb-6 text-white text-2xl">Erik Geskus</div>
+      </div>b-[1%]">
+      <div class="pt-7 pl-[20%] pb-6 text-white text-2xl">Erik Geskus</div>
     </div>
     <div>
-      <div class="flex flex-row">
-        <div class="pl-[20%] pb-[0.5%] text-white opacity-50">06 12 34 58 78</div>
+      <div class="flex flex-row items-center gap-2 pl-[20%]">
+        <Icon class="text-white" icon="mdi-light:home"></Icon>
+        <div class=" text-white opacity-50">06 12 34 58 78</div>
       </div>
     </div>
-    <div class="flex flex-row">
-      <div class="pl-[20%] pb-[0.5%] text-white opacity-50">info@erikgeskus.nl</div>
+    <div class="flex flex-row items-center gap-2 pl-[20%]">
+      <Icon class="text-white" icon="mdi-light:email"></Icon>
+      <div class=" text-white opacity-50">info@erikgeskus.nl</div>
     </div>
-    <div class="flex flex-row">
-      <div class="pl-[20%] pb-[0.5%] text-white opacity-50">Erik Geskus</div>
+    <div class="flex flex-row items-center gap-2 pl-[20%]">
+      <Icon class="text-white" icon="mdi-light:youtube-subscription"></Icon>
+      <div class="text-white opacity-50">Erik Geskus</div>
     </div>
-    <div class="pl-[20%] pb-[5%] pt-[2%]">
-      <div class="text-white text-black pb-[3%] pt-[3%] flex flex-col bg-white opacity-30 w-[50%] h-50 place-items-center justify-center rounded-lg">
-        <div class="text-2xl pb-[3%]">Contact formulier</div>
-        <form>
-          <div class="text-white flex flex-col pb-[2%%]">
-            <label for="naam" class="text-sm text-black">Uw naam</label>
-            <input type="text" id="naan" class="rounded-lg bg-black w-full dark:text-white">
-          </div>
-          <div class="text-white flex flex-col pb-[2%]">
-            <label for="email" class="text-sm text-black">Uw email</label>
-            <input type="text" id="email" class="rounded-lg bg-black w-full dark:text-white">
-          </div>
-          <div class="text-white flex flex-col pb-[2%] mt-[4%]">
-            <button class="rounded-lg bg-red-500 text- pl-[2%]">Contactverzoek opsturen</button>
-          </div>
-        </form>
-      </div>
+    <div>
+      <form class="">
+        <div class="flex flex-col pt-10 pl-[20%]">
+          <div class="flex text-2xl text-white mb-10">Contact Formulier</div>
+          <label for="naam" class="text-sm text-white pb-2">Uw naam</label>
+          <input v-model="nameValue" type="text" id="naam" class="w-2/3 sm:w-1/3 rounded-lg text-black" placeholder="Voornaam">
+        </div>
+        <div class="flex flex-col pt-5 pl-[20%]">
+          <label for="email" class="text-sm text-white pb-2">Uw email</label>
+          <input v-model="emailValue" type="text" id="email" class="w-2/3 sm:w-1/3 rounded-lg" placeholder="voorbeeld@gmail.com">
+        </div>
+        <div class="flex flex-col pt-5 pl-[20%]">
+          <label for="vraag" class="text-sm text-white pb-2">Uw vraag</label>
+          <textarea v-model="questionValue" rows="10" id="vraag" class="w-2/3 sm:w-1/3 rounded-lg" placeholder="Ik heb een vraag"></textarea>
+        </div>
+        <div class="flex flex-col pt-10 pb-10 pl-[20%]">
+          <button @click.prevent="submitForm" class="w-2/3 sm:w-1/3 rounded-lg bg-red-800 hover:bg-red-600 text-white ">Stuur contactverzoek</button>
+        </div>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
+import {Icon} from "@iconify/vue";
+import axios from 'axios'
 export default {
   name: "FooterComponent",
+  components: {Icon},
+  mounted() {
+    axios.defaults.baseURL = "http://localhost:5000"
+  },
   methods: {
-    submitForm() {
-      /**
-       * TODO Add submit and email functionality
-       */
+   async submitForm() {
+      if (this.nameValue && this.emailValue && this.questionValue) {
+        axios.post('/sendmail', {
+          from: this.nameValue,
+          email: this.emailValue,
+          question: this.questionValue
+        }).then(response => {
+          console.log(response)
+        })
+      } else {
+        alert("Één of meerdere verplichte velden zijn niet ingevuld op het contact formulier")
+      }
     }
   },
+  data() {
+    return {
+      nameValue: '',
+      emailValue: '',
+      questionValue: ''
+    }
+  }
 }
 </script>
 
@@ -67,8 +89,5 @@ export default {
   height: 5px;
   background: darkred;
   width: 61.1%;
-}
-.has-input {
-  border-color: green;
 }
 </style>
