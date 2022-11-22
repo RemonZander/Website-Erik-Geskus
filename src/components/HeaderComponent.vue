@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col bg-black text-white">
-      <div class="photo"></div>
-        <h1 class="flex m-auto text-5xl py-6">Eric Geskus</h1>
+      <div class="photo absolute pl-[95%] pb-[30%]">s</div>
+        <h1 class="flex m-auto text-5xl py-6 z-50">Eric Geskus</h1>
         <nav class="flex m-auto py-3 opacity-70">
           <ul class="flex flex-row gap-4">
             <li>
@@ -36,8 +36,9 @@ export default {
   }
 
   .photo {
-    background-image: url("../../public/Foto\ Erik.jpg");
-    background-size: auto;
+    background-image: url("../../public/FotoErik.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 </style>
