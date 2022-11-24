@@ -10,21 +10,18 @@
       </div>
       <div class="pl-[20%] pr-[20%] text-white opacity-50">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tos It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </div>b-[1%]">
+      </div>
       <div class="pt-7 pl-[20%] pb-6 text-white text-2xl">Erik Geskus</div>
     </div>
     <div>
       <div class="flex flex-row items-center gap-2 pl-[20%]">
-        <Icon class="text-white" icon="mdi-light:home"></Icon>
         <div class=" text-white opacity-50">06 12 34 58 78</div>
       </div>
     </div>
     <div class="flex flex-row items-center gap-2 pl-[20%]">
-      <Icon class="text-white" icon="mdi-light:email"></Icon>
       <div class=" text-white opacity-50">info@erikgeskus.nl</div>
     </div>
     <div class="flex flex-row items-center gap-2 pl-[20%]">
-      <Icon class="text-white" icon="mdi-light:youtube-subscription"></Icon>
       <div class="text-white opacity-50">Erik Geskus</div>
     </div>
     <div>
@@ -51,11 +48,10 @@
 </template>
 
 <script>
-import {Icon} from "@iconify/vue";
+
 import axios from 'axios'
 export default {
   name: "FooterComponent",
-  components: {Icon},
   mounted() {
     axios.defaults.baseURL = "http://localhost:5000"
   },
