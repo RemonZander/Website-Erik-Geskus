@@ -25,9 +25,41 @@
   </template>
 
 <script>
- export default {
-  name: "NewsComponent",
-}
+  import request from '../axios'
+  export default {
+    name: "NewsComponent",
+    mounted() {
+      this.getVideos()
+    },
+    methods: {
+      async getVideos() {
+        request.get(this.endpoint, {
+          params: {
+            key: this.key,
+            part: "snippet",
+            maxResults: 1,
+            q: "Erik Geskus"
+          }
+        }).then(response => {
+          console.log(response.data.items[0].snippet.title)
+          console.log(response.data.items[0].snippet.publishedAt)
+          console.log(response.data.items[0].snippet.description)
+          console.log(response.data.items[0].snippet.thumbnails.high.url)
+          document.getElementById("title").innerHTML = response.data.items[0].snippet.title
+          document.getElementById("date").innerHTML = response.data.items[0].snippet.publishedAt
+          document.getElementById("paragraph").innerHTML = response.data.items[0].snippet.description
+        }, error => {
+          console.log(error)
+        })
+      }
+    },
+    data() {
+      return {
+        key: "AIzaSyC6ra2NopgUXrC48zlznLJK6SL7TUGXypg",
+        endpoint: "/youtube.search.list"
+      }
+    }
+  }
 </script>
 
 <style scoped>
