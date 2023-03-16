@@ -15,16 +15,14 @@
 
         <div class="flex flex-col">
 
-          <div class="m-10 animate-pulse" id="right">
+          <div class="m-15 animate-pulse" id="right">
             <iframe class="float-right" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="500" height="410"></iframe>
           </div>
 
-          <div class="m-10 animate-pulse" id="left">
+          <div class="m-15 animate-pulse" id="left">
             <iframe class="float-left" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="500" height="410"></iframe>
           </div>
-
-
-            
+   
         </div>
 
 </template>
