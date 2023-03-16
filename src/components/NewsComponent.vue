@@ -81,5 +81,13 @@
     width: 300px;
     height: 210px;
   }
+
+  #right, #left {
+  animation: fadeIn;
+
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
 }
 </style>
