@@ -33,14 +33,14 @@
         </div>
         <div class="flex flex-col pt-5 pl-[20%]">
           <label for="email" class="text-sm text-white pb-2">Uw email</label>
-          <input v-model="emailValue" type="text" id="email" class="w-2/3 sm:w-1/3 rounded-lg" placeholder="voorbeeld@gmail.com">
+          <input v-model="emailValue" type="text" id="email" class="w-2/3 sm:w-1/3 rounded-lg text-black" placeholder="voorbeeld@gmail.com">
         </div>
         <div class="flex flex-col pt-5 pl-[20%]">
           <label for="vraag" class="text-sm text-white pb-2">Uw vraag</label>
-          <textarea v-model="questionValue" rows="10" id="vraag" class="w-2/3 sm:w-1/3 rounded-lg" placeholder="Ik heb een vraag"></textarea>
+          <textarea v-model="questionValue" rows="10" id="vraag" class="w-2/3 sm:w-1/3 rounded-lg text-black" placeholder="Ik heb een vraag"></textarea>
         </div>
         <div class="flex flex-col pt-10 pb-10 pl-[20%]">
-          <button @click.prevent="submitForm" class="w-2/3 sm:w-1/3 rounded-lg bg-red-800 hover:bg-red-600 text-white ">Stuur contactverzoek</button>
+          <button @click.prevent="submitForm" class="w-2/3 sm:w-1/3 rounded-lg bg-red-800 hover:bg-red-600 text-white">Stuur contactverzoek</button>
         </div>
       </form>
     </div>
