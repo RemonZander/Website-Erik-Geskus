@@ -1,6 +1,6 @@
 <template>
-    <div class="pb-[10%]">
-      <div class="flex flex-col w-4/12 mb-[2%] pt-[10%]">
+    <div class="" id="biography-container">
+      <div class="flex flex-col w-4/12 mb-[2%]">
         <p class="item-left text-white self-end text-3xl">Welkom!</p>
         <div class="h-2 bg-red-800"></div>
       </div>
@@ -13,6 +13,8 @@
         </div>
       </div>
     </div>  
+    <div class="pb-[10%]">
+    </div>
   </template>
 
 <script>

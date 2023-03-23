@@ -6,31 +6,39 @@
     <main class="flex-grow">
       <BiographyComponent/>
       <NewsComponent/>
+      <DiscographyComponent/>
+      <GalleryComponent/>
     </main>
     <footer>
-      <FooterComponent/>
+      <ContactComponent/>
     </footer>
   </div>
 </template>
 
 <script>
 
-import FooterComponent from "@/components/FooterComponent";
+import ContactComponent from "@/components/ContactComponent";
 import HeaderComponent from "@/components/HeaderComponent";
 import BiographyComponent from "@/components/BiographyComponent";
-import NewsComponent from "./NewsComponent.vue";
+import NewsComponent from "@/components/NewsComponent";
+import DiscographyComponent from "@/components/DiscographyComponent";
+import GalleryComponent from "@/components/GalleryComponent";
 
 export default {
   components: {
-    FooterComponent,
+    ContactComponent,
     HeaderComponent,
     BiographyComponent,
-    NewsComponent
+    NewsComponent,
+    DiscographyComponent,
+    GalleryComponent
   },
   name: "HomePage",
 }
 </script>
 
 <style>
-
+  body {
+    scroll-behavior: smooth;
+  }
 </style>

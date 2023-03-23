@@ -1,6 +1,6 @@
 <template>
 
-        <div class="flex flex-row-reverse" id="wrap-container">
+        <div class="flex flex-row-reverse" id="news-container">
 
           <div class="w-3/4 float-right">
             <div class="width-[40%] align-right mb-[5%]">

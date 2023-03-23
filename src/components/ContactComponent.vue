@@ -1,12 +1,12 @@
 <template xmlns:form="http://www.w3.org/1999/html">
-  <div>
-    <div class="flex flex-col w-6/12 mb-7 pt-[20%]">
+  <div id="contact-container">
+    <div class="flex flex-col w-6/12 mb-7">
       <p class="item-left text-white self-end text-3xl">Contact</p>
       <div class="h-2 bg-red-800"></div>
     </div>
     <div class="flex flex-col text-clip overflow-hidden ">
       <div class="flex flex-col text-elipsis mt-5 pl-[20%]">
-        <div class="flex text-2xl text-white mb-10">Gëinspireerd geraakt?</div>
+        <div class="flex text-2xl text-white mb-10">Geinspireerd geraakt?</div>
       </div>
       <div class="pl-[20%] pr-[20%] text-white opacity-50">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer tos It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -81,9 +81,4 @@ export default {
 </script>
 
 <style scoped>
-.red-line {
-  height: 5px;
-  background: darkred;
-  width: 61.1%;
-}
 </style>
