@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col bg-black text-white pb-[10%]" id="header">
-          <h1 class="flex m-auto text-5xl py-6">Eric Geskus</h1>
+    <div class="flex flex-col bg-black text-white pb-[3%]" id="header">
+          <h1 class="flex m-auto text-5xl py-6">Erik Geskus</h1>
           <nav class="flex m-auto py-3">
             <ul class="flex flex-row gap-3 lg:gap-5">
               <li>
@@ -20,6 +20,8 @@
               </li>
             </ul>
           </nav>
+
+          <img src="../assets/Erik.png">
     </div>
 </template>
 
@@ -68,5 +70,31 @@ export default {
 
   #header {
     animation: fadeIn;
+  }
+
+  img {
+    margin: 0 auto;
+
+    height: 400px;
+    width: 600px;
+  }
+
+  @media (max-width: 600px) {
+      img {
+      margin: 0 auto;
+
+      height: 300px;
+      width: 500px;
+    }
+  }
+
+  @media (max-width: 500px) {
+      img {
+      display: none;
+    }
+
+    #header {
+      padding-bottom: 20%;
+    }
   }
 </style>
