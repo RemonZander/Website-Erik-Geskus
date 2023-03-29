@@ -13,7 +13,7 @@
 
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col" id="col-1">
 
           <div class="animate-pulse" id="right">
             <iframe class="float-right" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="500" height="410"></iframe>
@@ -25,7 +25,7 @@
    
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col" id="col-2">
 
           <div class="animate-pulse" id="right">
             <iframe class="float-right" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="500" height="410"></iframe>
@@ -88,6 +88,18 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 550px) {
+  iframe {
+    float: none;
+  }
+
+  #col-1, #col-2 {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 @media (max-width: 750px) {
   iframe {
     width: 300px;
@@ -97,9 +109,9 @@
   #right, #left {
   animation: fadeIn;
 
-  margin-right: 15px;
-  margin-left: 15px;
-  margin-bottom: 10px;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 45px;
 }
 }
 </style>
