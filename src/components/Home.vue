@@ -7,7 +7,6 @@
       <BiographyComponent/>
       <NewsComponent/>
       <DiscographyComponent/>
-      <GalleryComponent/>
     </main>
     <footer>
       <ContactComponent/>
@@ -22,7 +21,6 @@ import HeaderComponent from "@/components/HeaderComponent";
 import BiographyComponent from "@/components/BiographyComponent";
 import NewsComponent from "@/components/NewsComponent";
 import DiscographyComponent from "@/components/DiscographyComponent";
-import GalleryComponent from "@/components/GalleryComponent";
 
 export default {
   components: {
@@ -31,7 +29,6 @@ export default {
     BiographyComponent,
     NewsComponent,
     DiscographyComponent,
-    GalleryComponent
   },
   name: "HomePage",
 }
