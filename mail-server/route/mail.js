@@ -11,7 +11,9 @@ const transporter = mailer.createTransport({
     },
     tls: {
         rejectUnauthorized: false
-    }
+    },
+    subject: 'Contact formulier erikgeskus.nl',
+    to: "erikgeskus@gmail.com",
 });
 
 transporter.verify((error) => {
@@ -33,8 +35,6 @@ router.post('/send',(req, res) => {
 
     const mailOptions = {
         from: from,
-        to: "erikgeskus@gmail.com",
-        subject: 'Contact formulier erikgeskus.nl',
         text: question,
     };
 
