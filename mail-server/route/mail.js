@@ -8,13 +8,15 @@ const transporter = mailer.createTransport({
     auth: {
         // user: 'erikgeskus@gmail.com',
         // pass: 'erikgeskus'
+    },
+    tls: {
+        rejectUnauthorized: false
     }
 });
 
 transporter.verify((error) => {
     if (error) {
-        console.log(error);
-        return;
+        throw error;
     }
 });
 
@@ -22,11 +24,18 @@ transporter.verify((error) => {
 router.post('/send',(req, res) => {
     let {from, email, question} = req.body;
 
+    if (!from || !email || !question) {
+        res.status(400).json({
+            message: 'One or more required fields are missing'
+        })
+        return;
+    }
+
     const mailOptions = {
         from: from,
-        to: email,
+        to: "erikgeskus@gmail.com",
         subject: 'Contact formulier erikgeskus.nl',
-        text: question
+        text: question,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {

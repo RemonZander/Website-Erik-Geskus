@@ -61,7 +61,7 @@ export default {
   methods: {
    async submitForm() {
       if (this.nameValue && this.emailValue && this.questionValue) {
-        axios.post('/sendmail', {
+        axios.post('/mail/send', {
           from: this.nameValue,
           email: this.emailValue,
           question: this.questionValue
