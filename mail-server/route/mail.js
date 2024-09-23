@@ -19,7 +19,25 @@ transporter.verify((error) => {
 });
 
 
-router.post('/send',(req) => {
+router.post('/send',(req, res) => {
     let {from, email, question} = req.body;
-    console.log(from, email, question);
+
+    const mailOptions = {
+        from: from,
+        to: email,
+        subject: 'Contact formulier erikgeskus.nl',
+        text: question
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            return;
+        }
+        console.log('Message sent: %s', info.messageId);
+    });
+
+   res.status(200).json({
+       message: 'Message sent'
+   })
 })
