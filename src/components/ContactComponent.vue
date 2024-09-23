@@ -15,11 +15,11 @@
     </div>
     <div>
       <div class="flex flex-row items-center gap-2 pl-[20%]">
-        <div class=" text-white opacity-50">06 12 34 58 78</div>
+        <div class="text-white opacity-50">06 12 34 58 78</div>
       </div>
     </div>
     <div class="flex flex-row items-center gap-2 pl-[20%]">
-      <div class=" text-white opacity-50">info@erikgeskus.nl</div>
+      <div class="text-white opacity-50">info@erikgeskus.nl</div>
     </div>
     <div class="flex flex-row items-center gap-2 pl-[20%]">
       <div class="text-white opacity-50">Erik Geskus</div>
