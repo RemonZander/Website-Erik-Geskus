@@ -10,10 +10,7 @@
                 <a class="hover-white cursor-default" @click="scrollToElementNieuws" ref="nieuws">Nieuws</a>
               </li>
               <li>
-                <a class="hover-white cursor-default" @click="scrollToElementGallerij" ref="gallerij">Gallerij</a>
-              </li>
-              <li>
-                <a class="hover-white cursor-default" @click="scrollToElementContact" ref="contact">Contact</a>
+                <a class="hover-white cursor-default" @click="scrollToElementContact" ref="contact">Contact / Booking</a>
               </li>
             </ul>
           </nav>
