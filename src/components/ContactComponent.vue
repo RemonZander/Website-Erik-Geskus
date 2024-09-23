@@ -26,9 +26,17 @@
     </div>
     <div>
       <div class="flex flex-row w-100">
-        <div class="appointlet-inline" style="width: 40vw; float: right; justify-content: right; margin-left: 7.5vw; margin-top: 5vh; margin-bottom: 2vh;" data-appointlet-inline="https://appt.link/meet-with-hendrik-isaac-geskus-Bb6gZYLw"></div>
-        <div class="flex flex-col items-center content-center " style="align-content: flex-end; margin-left: 10vw; background-color: white; height: 93vh; width: 35vw; margin-top: 5vh;">
-          <input type="text" placeholder="Je bericht" class="border-black"/>
+        <div class="appointlet-inline rounded-lg" style="width: 40vw; float: right; justify-content: right; margin-left: 7.5vw; margin-top: 5vh; margin-bottom: 2vh;" data-appointlet-inline="https://appt.link/meet-with-hendrik-isaac-geskus-Bb6gZYLw"></div>
+        <div class="flex flex-col items-center bg-gray-700 rounded-lg" style="margin-left: 10vw; height: 22vh; width: 35vw; margin-top: 5vh;">
+          <div class="mb-3 mt-5">
+            <input type="text" placeholder="Uw volledige naam" class="text-center border-solid border-2 border-black text-black rounded-lg"/>
+          </div>
+          <div class="mb-3">
+            <textarea cols="35" type="text" placeholder="Uw vraag" class="text-center border-solid border-2 border-black text-black rounded-lg"/>
+          </div> 
+          <div>
+            <button class="bg-blue-500 rounded-lg" style="width: 12vw; height: 4vh;" type="button">Vraag versturen</button>
+          </div>
         </div>
       </div>
       <link href="https://js.appointlet.com/styles.css" rel="stylesheet">

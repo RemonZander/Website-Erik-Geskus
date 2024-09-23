@@ -10,9 +10,6 @@
                 <a class="hover-white cursor-default" @click="scrollToElementNieuws" ref="nieuws">Nieuws</a>
               </li>
               <li>
-                <a class="hover-white cursor-default" @click="scrollToElementDiscografie" ref="discografie">Discografie</a>
-              </li>
-              <li>
                 <a class="hover-white cursor-default" @click="scrollToElementGallerij" ref="gallerij">Gallerij</a>
               </li>
               <li>
@@ -42,11 +39,6 @@ export default {
 
     scrollToElementDiscografie() {
       const scrollToElement = document.getElementById(`discography-container`)
-      scrollToElement.scrollIntoView({ behavior: 'smooth' });
-    },
-
-    scrollToElementGallerij() {
-      const scrollToElement = document.getElementById(`gallery-container`)
       scrollToElement.scrollIntoView({ behavior: 'smooth' });
     },
 
