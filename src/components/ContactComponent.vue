@@ -25,8 +25,8 @@
       <div class="text-white opacity-50">Erik Geskus</div>
     </div>
     <div>
-      <div class="flex flex-row w-100">
-        <div class="appointlet-inline rounded-lg" style="width: 40vw; float: right; justify-content: right; margin-left: 7.5vw; margin-top: 5vh; margin-bottom: 2vh;" data-appointlet-inline="https://appt.link/meet-with-hendrik-isaac-geskus-Bb6gZYLw"></div>
+      <div class="responsive-contact">
+        <div class="appointlet-inline rounded-lg appointlet-width" style="width: 40vw; float: right; justify-content: right; margin-left: 7.5vw; margin-top: 5vh; margin-bottom: 2vh;" data-appointlet-inline="https://appt.link/meet-with-hendrik-isaac-geskus-Bb6gZYLw"></div>
         <div class="flex flex-col items-center bg-gray-700 rounded-lg" style="margin-left: 10vw; height: 43vh; width: 35vw; margin-top: 5vh;">
           <div class="mb-4 mt-5">
             <input v-bind="nameValue" type="text" placeholder="Uw volledige naam" style="height: 5vh; width: 22vw;" class="text-center border-solid border-2 border-black text-black rounded-lg"/>

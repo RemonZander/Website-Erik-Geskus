@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.responsive-contact {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+@media only screen and (max-width: 640px) {
+    .responsive-contact {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .appoointlet-width {
+        width: 100vw !important; 
+    }
+}
